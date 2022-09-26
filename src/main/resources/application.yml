@@ -5,6 +5,8 @@ spring:
     hikari:
       username: limite
       password: limite_passwd
+  flyway:
+    baselineOnMigrate: true
   jpa:
     properties:
       hibernate:

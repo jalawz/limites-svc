@@ -1,0 +1,1 @@
+INSERT INTO limite_diario (agencia, conta, data, valor) values (233, 88229, now(), 35000);
