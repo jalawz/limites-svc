@@ -29,4 +29,16 @@ public class LimiteDiarioController {
 
         throw new ResponseStatusException(HttpStatus.NOT_FOUND, "Recurso não encontrado");
     }
+
+    @GetMapping("/{agencia}/{conta}")
+    public LimiteDiario buscarLimiteDiario(
+            @PathVariable("agencia") final Long agencia,
+            @PathVariable("conta") final Long conta)
+    {
+        Optional<LimiteDiario> limiteDiario = service.buscarLimiteDiario(agencia, conta);
+        if (limiteDiario.isPresent()) {
+            return limiteDiario.get();
+        }
+        throw new ResponseStatusException(HttpStatus.NOT_FOUND, "Recurso não encontrado");
+    }
 }

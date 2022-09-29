@@ -1,0 +1,1 @@
+ALTER TABLE limite_diario DROP COLUMN data;

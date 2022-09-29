@@ -1,3 +1,6 @@
+server:
+  port: 8081
+
 spring:
   datasource:
     driver-class-name: org.postgresql.Driver
@@ -5,6 +8,8 @@ spring:
     hikari:
       username: limite
       password: limite_passwd
+  flyway:
+    baselineOnMigrate: true
   jpa:
     properties:
       hibernate:
@@ -16,3 +21,7 @@ spring:
       generate-ddl: true
       show-sql: true
     generate-ddl: true
+
+
+limite:
+  valor: 2000
